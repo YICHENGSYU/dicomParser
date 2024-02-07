@@ -180,7 +180,7 @@ ADD ./libopencv_java.so /usr/lib/libopencv_java.so
 
 ```
 
-==**建立 動態鏈結libopencv_java.so的JDK 的image**==
+**建立 動態鏈結libopencv_java.so的JDK 的image**
 ```
 docker build -t openjdk11withopencv .
 ```
@@ -198,7 +198,7 @@ docker build -t openjdk11withopencv .
 
 
 
-==**Dockerfile**==
+**Dockerfile**
 
 ```dockerfile=
 # 以動態鏈結libopencv_java.so的JDK為base image
@@ -301,7 +301,7 @@ spec:
 
 ```
 
-==**進行K8S deployment**==
+**進行K8S deployment**
 ```
 kubectl apply -f kube-dicomparser-deployment.yaml
 ```
