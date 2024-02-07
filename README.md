@@ -37,7 +37,7 @@
 
 6. 開始進入愉快的程式開發環節 !
 
-**==註 : .dll檔案為Dynamic-Linking Library，為動態鏈結函式庫，與靜態鏈結函式庫(Static-linking Lib)不同，使用動態鏈結函式庫時，主程式是連接至動態鏈結函式庫後使用動態鏈結函式庫內的函式，動態鏈結函式庫會有自己的memory。Windows系統的動態鏈結函式庫副檔名為.dll 。==**
+**註 : .dll檔案為Dynamic-Linking Library，為動態鏈結函式庫，與靜態鏈結函式庫(Static-linking Lib)不同，使用動態鏈結函式庫時，主程式是連接至動態鏈結函式庫後使用動態鏈結函式庫內的函式，動態鏈結函式庫會有自己的memory。Windows系統的動態鏈結函式庫副檔名為.dll 。**
 
 
 
@@ -211,12 +211,12 @@ ENTRYPOINT ["java","-jar","demo.jar"]
 ```
 
 
-==**建立範例SpringBooot Web Application的image**==
+**建立範例SpringBooot Web Application的image**
 ```
 docker build -t dicomparser .
 ```
 
-==**執行範例SpringBooot Web Application的container**==
+**執行範例SpringBooot Web Application的container**
 ```
 docker run -d --name dicomparser -p 8112:8112 ${dicomparser的imageID}
 ```
@@ -226,24 +226,24 @@ docker run -d --name dicomparser -p 8112:8112 ${dicomparser的imageID}
 將image打成.tar檔後傳送到要部署的VM上，執行deployment。
 
 
-==**將image打成.tar檔**==
+**將image打成.tar檔**
 
 ```
 docker save -o dicomparser.tar dicomparser
 ```
 
 
-==**還原image到Docker**==
+**還原image到Docker**
 ```
 docker load -i dicomparser.tar
 ```
 
-==**K8S1.27.1版本還原image到containerD**==
+**K8S1.27.1版本還原image到containerD**
 ```
 sudo ctr --namespace=k8s.io images import dicomparser.tar
 ```
 
-==**建立kube-dicomparser-deployment.yaml**==
+**建立kube-dicomparser-deployment.yaml**
 ```
 vim kube-dicomparser-deployment.yaml
 ```
