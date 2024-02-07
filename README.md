@@ -184,7 +184,7 @@ ADD ./libopencv_java.so /usr/lib/libopencv_java.so
 ```
 docker build -t openjdk11withopencv .
 ```
-
+**註:libopencv_java.so這個檔案也在dcm4che 5.22.4安裝包內，在/dcm4che-5.22.4/lib/linux-x86_64目錄下**
 
 接下來要將SpringBooot Web Application容器化(Dockerize)
 
